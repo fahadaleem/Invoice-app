@@ -90,9 +90,11 @@ export default {
         payment_status: "UNPAID",
       };
 
-      apiUtilsService
-        .createDeliveryNote(payload)
-        .then((res) => console.log(res.data));
+      apiUtilsService.createDeliveryNote(payload).then((res) => {
+        if (res.status === "success") {
+          self.$router.push(`/delivery-note/${res.data._id}`);
+        }
+      });
     },
   },
 };
