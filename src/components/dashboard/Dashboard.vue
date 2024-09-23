@@ -22,9 +22,12 @@
     </div>
     <div class="bg-slate-400 flex-1 p-12">
       <div class="mb-4">
-        <button class="bg-slate-200 w-full px-8 py-4 rounded-md font-medium">
+        <router-link
+          to="/stock-purchase"
+          class="bg-slate-200 w-full px-8 py-4 rounded-md font-medium text-center w-full block"
+        >
           New Stock Purchase
-        </button>
+        </router-link>
       </div>
       <div class="flex justify-between gap-4">
         <router-link

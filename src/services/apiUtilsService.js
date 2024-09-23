@@ -21,10 +21,16 @@ export const apiUtilsService = (() => {
     return axios.get(url).then((res) => res.data);
   }
 
+  function createStockPurchase(payload) {
+    const url = `${import.meta.env.VITE_BACKEND_URL}/api/stock`;
+    return axios.post(url, payload).then((res) => res.data);
+  }
+
   return {
     getCustomers,
     getProducts,
     getDeliveryNoteDetails,
     createDeliveryNote,
+    createStockPurchase,
   };
 })();
